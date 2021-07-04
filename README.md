@@ -47,7 +47,9 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 
 ### View full case study introduction [here](https://8weeksqlchallenge.com/case-study-2/).
 
-## *[UPDATING]*
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/ReadMe.md) or
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study_2-971901?style=for-the-badge&logo=GITHUB)](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/ReadMe.md)
+
 
 ---
 
