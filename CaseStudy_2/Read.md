@@ -150,6 +150,8 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 9. What was the total volume of pizzas ordered for each hour of the day?
 10. What was the volume of orders for each day of the week?
 
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Pizza_Metrics/Read1.md)
+
 ### 2. **Runner and Customer Experience**
 1. How many runners signed up for each 1 week period? (i.e. week starts **```2021-01-01```**)
 2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
@@ -158,6 +160,8 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 5. What was the difference between the longest and shortest delivery times for all orders?
 6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
 7. What is the successful delivery percentage for each runner?
+
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Runner_Customer_Exp/Read1.md)
 
 ### 3. **Ingredient Optimisation**
 1. What are the standard ingredients for each pizza?
@@ -172,6 +176,8 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the **```customer_orders```** table and add a 2x in front of any relevant ingredients
     * For example: ```"Meat Lovers: 2xBacon, Beef, ... , Salami"```
 6. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
+
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Ingredient%20Optimization/Read1.md)
 
 ### 4. **Pricing and Ratings**
 1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?
@@ -190,6 +196,8 @@ Add cheese is $1 extra
      * ```Average speed```
      * ```Total number of pizzas```
 5. f a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
+
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Pricing_Rating/Read1.md)
 
  <br /> 
 
