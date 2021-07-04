@@ -32,13 +32,11 @@ FROM runners
 GROUP BY FLOOR(DATEDIFF(day,'2021-01-01', registration_date ) / 7 + 1);
 ```
 **Result:**
-week_num	number_of_runners
-1			2
-2			1
-3			1
-
-**Answer:**
-
+|week_num|number_of_runners|
+|--------|-----------------|
+|1       |2				   |
+|2		 |1				   |
+|3		 |1				   |
 
 ---
 
@@ -52,12 +50,11 @@ group by runner_id;
 ```
 
 **Result:**
-runner_id	Average_Mins
-1			15
-2			24
-3			10
-**Answer**:
-
+|runner_id|Average_Mins|
+|---------|------------|
+|1        |15		   |
+|2		  |24		   |
+|3		  |10		   |
 
 ---
 
@@ -80,16 +77,18 @@ from q1 join q2 on q1.order_id=q2.order_id;
 ```
 
 **Result:**
-order_id	Pizzas_ordered	prepare_time
-1			1				10
-2			1				10
-3			2				21
-4			3				30
-5			1				10
-7			1				10
-8			1				21
-10			2				16
-**Answer: Yes, There is relation.**
+|order_id|Pizzas_ordered|prepare_time|
+|--------|--------------|------------|
+|1       |1				|10          |
+|2       |1				|10          |
+|3       |2				|21          |
+|4       |3				|30          |
+|5       |1				|10          |
+|7       |1				|10          |
+|8       |1				|21          |
+|10      |2				|16          |
+
+**Answer: Yes, There is relation. 1 Pizza ~ 10 mins**
 
 ---
 
@@ -104,14 +103,14 @@ order by 1;
 ```
 
 **Result:**
-customer_id	AVGDistance_Covered(kms)
-101			29.5
-102			18.3333333333333
-103			40
-104			11.6666666666667
-105			25
-
-**Answer**:
+|customer_id|AVGDistance_Covered(kms)|
+|-----------|------------------------|
+|101        |29.5		   			 |
+|102		|18.33		   			 |
+|103	    |40		   				 |
+|104		|11.67					 |
+|105		|25						 |
+	
 ---
 
 ### **Q5 What was the difference between the longest and shortest delivery times for all orders?**
@@ -121,8 +120,9 @@ from runner_orders;
 
 ```
 **Result:**
-difference_between_delivery (mins)
-30
+|difference_between_delivery (mins)|
+|----------------------------------|
+|30								   |
 **Answer:**
 
 
@@ -136,17 +136,19 @@ group by order_id, runner_id
 order by 2;
  ``` 
 **Result:**
-order_id	runner_id	Average_Speed(Kph)
-1			1			37.5
-2			1			44.44
-3			1			39
-10			1			60
-4			2			34.5
-7			2			60
-8			2			92
-5			3			40
-**Answer: Runner 1 has constant speed
-		  Runner 2 has increasing speed**
+|order_id|runner_id|Average_Speed(Kph)|
+|--------|---------|------------------|
+|1       |1		   |37.5          	  |
+|2       |1	   	   |44.44          	  |
+|3       |1		   |39           	  |
+|10      |1		   |60          	  |
+|4       |2		   |34.5          	  |
+|7       |2		   |60          	  |
+|8       |2		   |92          	  |
+|5       |3		   |40          	  |
+
+**Answer: Runner 1 has constant speed except for order_id 10 and doesn't seem to have any connection with time.
+		**Runner 2 has increasing speed and is connected to time, the later the delivery the faster the speed.**
 
 
 ---
@@ -167,10 +169,10 @@ on q1.runner_id=q2.runner_id ;
 ```
 
 **Result:**
-runner_id	Sucessful Deliveries
-1			100
-2			75
-3			50
+|runner_id|Sucessful Deliveries|
+|---------|--------------------|
+|1        |100		   		   |
+|2		  |75		   		   |
+|3		  |50		   		   |
 
-**Answer:**
-
+---

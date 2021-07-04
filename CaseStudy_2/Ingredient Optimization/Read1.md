@@ -42,12 +42,10 @@ q1.value=pt.topping_id
 group by cast(pr.pizza_name as varchar);
 ```
 **Result:**
-Pizza		StandardToppings
-Meatlovers	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami
-Vegetarian	Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce
-
-**Answer:**
-
+|Pizza		|StandardToppings 											     	  |
+|-----------|---------------------------------------------------------------------|
+|Meatlovers |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|
+|Vegetarian |Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce		      |
 
 ---
 
@@ -67,10 +65,9 @@ order by Added desc;
 ```
 
 **Result:**
-Extra	Added
-Bacon	3
-**Answer**:
-
+|Extra|	Added|
+|-----|------|
+|Bacon|3	 |
 
 ---
 
@@ -90,9 +87,9 @@ order by Excluded desc;
 ```
 
 **Result:**
-Exclusion	Excluded
-Cheese		3
-**Answer: **
+|Exclusion|Excluded|
+|---------|--------|
+|Cheese	  |3	   |
 
 ---
 
@@ -164,21 +161,22 @@ CROSS APPLY STRING_SPLIT(toppings, ',');
 
 ```
 **Result:**
-row_num	customer_id	order_id	StandardToppings	ExtraToppings	ExcludeToppings
-1	101	1	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	NULL
-2	101	2	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	NULL
-3	102	3	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	NULL
-4	102	3	Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce	NULL	NULL
-5	103	4	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	Cheese
-6	103	4	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	Cheese
-7	103	4	Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce	NULL	Cheese
-8	104	5	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	Bacon	NULL
-9	101	6	Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce	NULL	NULL
-10	105	7	Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce	Bacon	NULL
-11	102	8	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	NULL
-12	103	9	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	Bacon, Chicken	Cheese
-13	104	10	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	NULL	NULL
-14	104	10	Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami	Bacon, Cheese	BBQ Sauce, Mushrooms
+|row_num|customer_id|order_id|StandardToppings													   |ExtraToppings|ExcludeToppings	  |
+|-------|-----------|--------|---------------------------------------------------------------------|-------------|--------------------|
+|1		|101		|1		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |NULL				  |
+|2		|101		|2		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |NULL				  |
+|3		|102		|3		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |NULL				  |
+|4		|102		|3		 |Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce		   |NULL		 |NULL				  |
+|5		|103		|4		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |Cheese			  |
+|6		|103		|4		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |Cheese			  |
+|7		|103		|4		 |Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce		   |NULL		 |Cheese			  |
+|8		|104		|5		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|Bacon		 |NULL				  |
+|9		|101		|6		 |Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce		   |NULL		 |NULL				  |
+|10		|105		|7		 |Cheese, Mushrooms, Onions, Peppers, Tomatoes, Tomato Sauce	  	   |Bacon		 |NULL				  |
+|11		|102		|8		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |NULL				  |
+|12		|103		|9		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|Bacon,Chicken|Cheese			  |
+|13		|104		|10		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|NULL		 |NULL				  |
+|14		|104		|10		 |Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami|Bacon, Cheese|BBQ Sauce, Mushrooms|
 **Answer: Still Working On It**
 
 

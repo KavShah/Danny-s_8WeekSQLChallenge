@@ -39,8 +39,10 @@ where ro.pickup_time is NULL)
 select * from q1,q2;
 ```
 **Result:**
-Pizzas_ordered	Pizzas_cancelled
-14		2
+
+|Pizzas_ordered|Pizzas_cancelled|
+|--------------|----------------|
+|14            |2				|
 **Answer:**
 
 
@@ -55,8 +57,9 @@ where ro.pickup_time is not NULL;
 ```
 
 **Result:**
-Unique_Customer
-8
+|Unique_Customer|
+|---------------|
+|8				|
 
 **Answer**:
 
@@ -72,10 +75,13 @@ group by runner_id;
 ```
 
 **Result:**
-runner_id	Successful_Delivery
-1	4
-2	3
-3	1
+|runner_id|Successful_Delivery|
+|---------|-------------------|
+|1        |4				  |
+|2		  |3				  |
+|3		  |1				  |
+
+
 **Answer:**
 
 ---
@@ -91,9 +97,10 @@ group by cast(pizza_name as nvarchar(25));
 ```
 
 **Result:**
-Pizza	Times_Delivered
-Meatlovers	9
-Vegetarian	3
+|Pizza		|Times_Delivered|
+|-----------|---------------|
+|Meatlovers |9				|
+|Vegetarian	|3				|
 
 **Answer**:
 ---
@@ -108,14 +115,16 @@ where ro.pickup_time is not null
 group by co.customer_id, cast(pizza_name as nvarchar(25));
 ```
 **Result:**
-customer_id	Pizza	Times_Delivered
-101		Meatlovers	2
-102		Meatlovers	2
-102		Vegetarian	1
-103		Meatlovers	2
-103		Vegetarian	1
-104		Meatlovers	3
-105		Vegetarian	1
+|customer_id|Pizza		|Times_Delivered|
+|-----------|-----------|---------------|
+|101        |Meatlovers |2        		|
+|102        |Meatlovers |2        		|
+|102        |Vegetarian |1         		|
+|103        |Meatlovers |2         		|
+|103        |Vegetarian |1         		|
+|104        |Meatlovers |3         		|
+|105        |Vegetarian |1         		|
+
 **Answer:**
 
 
@@ -131,8 +140,10 @@ group by ro.order_id, cast(pickup_time as date)
 order by ordered desc;
  ``` 
 **Result:**
-order_id	Pickup_Date	ordered
-4	2020-01-04	3
+|order_id|Pickup_Date|ordered|
+|--------|-----------|-------|
+|4 		 |2020-01-04 |3		 |
+
 **Answer:**
 
 
@@ -149,13 +160,14 @@ group by customer_id, case when exclusions is not null or extras is not null the
 ```
 
 **Result:**
-| customer_id | changes | no_change |
-101	No change	2
-102	No change	3
-103	At least 1 change	3
-104	At least 1 change	2
-104	No change	1
-105	At least 1 change	1
+|customer_id|changes		  |no_change|
+|-----------|-----------------|---------|
+|101        |No change 		  |2        |
+|102        |No change 		  |3       	|
+|102        |At least 1 change|3        |
+|103        |At least 1 change|2        |
+|103        |No change 		  |1        |
+|104        |At least 1 change|1        |
 
 **Answer:**
 
@@ -171,8 +183,9 @@ on ro.order_id = co.order_id
 where pickup_time is not null and exclusions is not null and extras is not null;
 ```  
 **Result:**
-ordered
- 1           
+|ordered|
+|-------|
+|1		|         
 
 **Answer:**
 
@@ -188,12 +201,14 @@ where pickup_time is not null
 group by DATEPART(hour, order_time);
 ```
 **Result:**
-ordered_hour	Times_Ordered
-13	3
-18	3
-19	1
-21	2
-23	3
+|ordered_hour|Times_Ordered|
+|------------|-------------|
+|13        	 |3			   |
+|18		     |3			   |
+|19		     |1			   |
+|21			 |2			   |
+|23			 |3			   |
+
 **Answer:**
 
 
@@ -209,13 +224,13 @@ group by DATEname(WEEKDAY, order_time);
 ```
 
 **Result:**
-Day_Ordered	Times_Ordered
-Saturday		5
-Thursday		3
-Wednesday	4
+|Day_Ordered|Times_Ordered|
+|-----------|-------------|
+|Saturday 	|5			  |
+|Thursday   |3			  |
+|Wednesday  |4			  |
 
 **Answer:**
 
 
 ---
-<p>&copy; 2021 Leah Nguyen</p>
