@@ -40,7 +40,7 @@ when pizza_id=2 and ext = 4  then  10*count(pizza_id)+1
 else 10*count(pizza_id)+1
 end as Total
 from #tmp
-group by pizza_id, ext
+group by pizza_id, ext;
 
 
 
@@ -84,7 +84,7 @@ SET rating = CASE
 	     WHEN order_id = 4 THEN 4
 	     WHEN order_id = 5 THEN 2
 	     END;
- 
+
 ------------------------------------------------------------
 
  /*4 Using your newly generated table - can you join all of the information together to form a table which has the following information 
@@ -136,7 +136,7 @@ INSERT INTO stats (
 				      co.order_time, 
                       ro.pickup_time, 
                       ro.duration,
-                ROUND(avg((convert(int,distance) / convert(int,duration))), 2) * 60 AS average_speed, 
+                ROUND(avg((convert(float,distance) / convert(float,duration))*60),2) AS average_speed, 
 		         COUNT(co.pizza_id) AS total_number_of_pizzas, 
                                             rat.rating
                                             
@@ -178,3 +178,21 @@ WITH sal AS (
 SELECT ROUND((sales - expenses), 2) AS profit
 FROM sal, expen;
 
+
+--BONUS Qs
+  --If Danny wants to expand his range of pizzas - 
+  --how would this impact the existing data design? 
+  --Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?
+
+  INSERT INTO pizza_names
+  ("pizza_id", "pizza_name")
+VALUES
+  (3, 'Supreme Pizza');
+
+  INSERT INTO pizza_recipes
+  ("pizza_id", "toppings")
+VALUES
+  (3, '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12');
+
+  select * from pizza_names;
+  select * from pizza_recipes;
