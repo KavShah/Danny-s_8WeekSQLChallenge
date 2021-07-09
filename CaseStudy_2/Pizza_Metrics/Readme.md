@@ -43,7 +43,7 @@ select * from q1,q2;
 |Pizzas_ordered|Pizzas_cancelled|
 |--------------|----------------|
 |14            |2				|
-**Answer:**
+
 
 
 ---
@@ -61,7 +61,7 @@ where ro.pickup_time is not NULL;
 |---------------|
 |8				|
 
-**Answer**:
+
 
 
 ---
@@ -82,8 +82,6 @@ group by runner_id;
 |3		  |1				  |
 
 
-**Answer:**
-
 ---
 
 ### **Q4. How many of each type of pizza was delivered?**
@@ -102,7 +100,7 @@ group by cast(pizza_name as nvarchar(25));
 |Meatlovers |9				|
 |Vegetarian	|3				|
 
-**Answer**:
+
 ---
 
 ### **Q5. How many Vegetarian and Meatlovers were ordered by each customer?**
@@ -125,8 +123,6 @@ group by co.customer_id, cast(pizza_name as nvarchar(25));
 |104        |Meatlovers |3         		|
 |105        |Vegetarian |1         		|
 
-**Answer:**
-
 
 ---
 
@@ -143,9 +139,6 @@ order by ordered desc;
 |order_id|Pickup_Date|ordered|
 |--------|-----------|-------|
 |4 		 |2020-01-04 |3		 |
-
-**Answer:**
-
 
 ---
 
@@ -169,9 +162,6 @@ group by customer_id, case when exclusions is not null or extras is not null the
 |103        |No change 		  |1        |
 |104        |At least 1 change|1        |
 
-**Answer:**
-
-
 ---
 
 ### **Q8. How many pizzas were delivered that had both exclusions and extras?**
@@ -186,9 +176,6 @@ where pickup_time is not null and exclusions is not null and extras is not null;
 |ordered|
 |-------|
 |1		|         
-
-**Answer:**
-
 
 ---
 
@@ -209,9 +196,6 @@ group by DATEPART(hour, order_time);
 |21			 |2			   |
 |23			 |3			   |
 
-**Answer:**
-
-
 ---
 
 ### **Q10. What was the volume of orders for each day of the week?**
@@ -229,8 +213,5 @@ group by DATEname(WEEKDAY, order_time);
 |Saturday 	|5			  |
 |Thursday   |3			  |
 |Wednesday  |4			  |
-
-**Answer:**
-
 
 ---

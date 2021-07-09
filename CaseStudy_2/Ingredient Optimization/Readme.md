@@ -345,7 +345,7 @@ GROUP BY
   pizza_name;
 
 ```
-**Result:**
+**Result:Done in Postgres, need to find a way around regexp_split_to_table for sql server**
 
 | order_id | customer_id | pizza_id | order_time               | original_row_number | ingredients_list                                                                     |
 | -------- | ----------- | -------- | ------------------------ | ------------------- | ------------------------------------------------------------------------------------ |
@@ -365,10 +365,6 @@ GROUP BY
 | 10       | 104         | 1        | 2020-01-11T18:34:49.000Z | 14                  | Meatlovers: 2x Bacon, Beef, 2x Cheese, Chicken, Pepperoni, Salami                    |
 
 ---
-
-
-**Answer: Postgres Query**
-
 
 ---
 

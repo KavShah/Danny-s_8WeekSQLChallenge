@@ -123,8 +123,6 @@ from runner_orders;
 |difference_between_delivery (mins)|
 |----------------------------------|
 |30								   |
-**Answer:**
-
 
 ---
 
@@ -147,7 +145,7 @@ order by 2;
 |8       |2		   |92          	  |
 |5       |3		   |40          	  |
 
-**Answer: Runner 1 has constant speed except for order_id 10 and doesn't seem to have any connection with time.
+**Answer: Runner 1 has constant speed except for order_id 10 and doesn't seem to have any connection with time.**
 		**Runner 2 has increasing speed and is connected to time, the later the delivery the faster the speed.**
 
 
