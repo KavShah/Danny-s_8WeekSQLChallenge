@@ -1,6 +1,6 @@
 # [8-Week SQL Challenge](https://github.com/KavShah/Danny-s_8WeekSQLChallenge)
 
-# Case Study #3 - Ingredient Optimization
+# Case Study #2 Part 3 - Ingredient Optimization
 <p align="center">
 <img src="https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/Image/W2.png" width=50% height=50%>
 

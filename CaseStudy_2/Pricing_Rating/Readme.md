@@ -1,6 +1,6 @@
 # [8-Week SQL Challenge](https://github.com/KavShah/Danny-s_8WeekSQLChallenge)
 
-# Case Study # - Pricing and Rating
+# Case Study #2 Part 4 - Pricing and Rating
 <p align="center">
 <img src="https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/Image/W2.png" width=50% height=50%>
 
