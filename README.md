@@ -48,7 +48,7 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 ### View full case study introduction [here](https://8weeksqlchallenge.com/case-study-2/).
 
 ## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Read.md) or
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study_2-971901?style=for-the-badge&logo=GITHUB)](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Read.md)
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study_2-971901?style=for-the-badge&logo=GITHUB)](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_2/Readme.md)
 
 
 ---
@@ -65,7 +65,9 @@ Danny created Foodie-Fi with a data driven mindset and wanted to ensure all futu
 
 ### View full case study introduction [here](https://8weeksqlchallenge.com/case-study-3/).
 
-## *[UPDATING]*
+## View the entire solution for this part [**here**](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_3/Readme.md) or
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study_3-971901?style=for-the-badge&logo=GITHUB)](https://github.com/KavShah/Danny-s_8WeekSQLChallenge/blob/main/CaseStudy_3/Readme.md)
+
 
 ---
 
